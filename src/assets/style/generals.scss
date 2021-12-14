@@ -1,10 +1,29 @@
 
+@import './vars.scss';
 *{
   box-sizing:border-box;
   margin: 0;
   padding:0;
 }
+
 .dc-wrapper{
   width: 70%;
   margin:auto;
+}
+
+.dc-button-fill{
+  background-color:$secondaryColor;
+  color:white;
+}
+.dc-button-empty{
+  background-color:transparent;
+  color:$secondaryColor;
+}
+.dc-button-empty,
+.dc-button-fill{
+  border: 1px solid $secondaryColor;
+  border-radius:3px;
+  font-size:12px;
+  padding:5px 15px;
+
 }
