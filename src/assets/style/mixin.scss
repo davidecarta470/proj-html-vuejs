@@ -3,3 +3,27 @@
   justify-content: space-between;
   align-items: center;
 }
+
+@mixin general(){
+  p:first-child{
+    color:$secondaryColor;
+  }
+  p:last-child{
+    color:lighten($primaryColor, 50%);
+    font-size:12px;
+  }
+  div{
+    h5{
+      color:white;
+    }
+    h2{
+      padding: 5px 10px;
+    }
+    h2:first-child{
+      
+      background-color: rgba($secondaryColor,  .2); 
+      color:$secondaryColor;
+      border-radius: 5px;
+    } 
+}
+}

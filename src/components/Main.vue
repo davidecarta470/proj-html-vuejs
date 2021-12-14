@@ -151,11 +151,101 @@
         </div>
       </div>
     </section>
-    <section></section>
-    <section></section>
+
+
+    <section class="fourth-section">
+      <div class="top-fourth-section text-center">
+        <p><strong> HOW IT WORK IN PRACTICE</strong></p>
+        <div class="d-flex my-3 justify-content-center">
+          <h2><strong>Process</strong></h2>
+          <h2><strong>Menagement</strong></h2>
+        </div>
+        <p class="my-3">
+          We work with innovative methodologies to ensure that the entire reformatting process is done from start to finish
+        </p>
+      </div>
+      <div class="bottom-fourth-section">
+        <div class="container">
+          <div class="item">
+            <div class="d-flex justify-content-center align-items-center">
+              <strong >01</strong>
+            </div>
+            <h6 class=""><strong>Collections of infoemation</strong> </h6>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div class="item">
+            <div class="d-flex justify-content-center align-items-center">
+              <strong >02</strong>
+            </div>
+            <h6 class=""><strong>Strategic Planning</strong> </h6>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div class="item">
+            <div class="d-flex justify-content-center align-items-center">
+              <strong >03</strong>
+            </div>
+            <h6 class=""><strong>Assignment of responsibilities</strong> </h6>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div class="item">
+            <div class="d-flex justify-content-center align-items-center">
+              <strong >04</strong>
+            </div>
+            <h6 class=""><strong>Formating process</strong> </h6>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div class="item">
+            <div class="d-flex justify-content-center align-items-center">
+              <strong >05</strong>
+            </div>
+            <h6 class=""><strong>Continuity formalizzation</strong> </h6>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="fifth-section">
+      <div class="dc-wrapper">
+        <div class="row">
+
+          <div class="fifth-section-left col-8">
+            <!-- top fifth section left -->
+            <p><strong> WE LIKE WHAT WE DO</strong></p>
+            <div class="d-flex my-3 ">
+              <h2><strong>Team</strong></h2>
+              <h2><strong>of expert</strong></h2>
+            </div>
+            <p class="my-3 text-white">
+              We work with innovative methodologies to ensure that the entire reformatting process is done from start to finish
+            </p>
+            <!-- bottom fifth section left list of items-->
+            
+             <Team
+             :membersTeam="team"
+             />            
+            
+          </div>
+
+
+          <div class="fifth-section-right col-4 p-4 text-white">
+            <h5><strong>President Speech</strong></h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi natus optio quia.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam obcaecati voluptatem suscipit, reprehenderit nam quod in, illo qui accusantium iusto fugit distinctio voluptates deleniti maxime!</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa porro suscipit perferendis laboriosam neque maxime explicabo quo aliquid dolor! Harum, quo dolorem.</p>
+            <p class="d-flex justify-content-between">
+              <strong>T.Johonson</strong>
+              <span><i class="fas fa-quote-right"></i></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
     <section></section>
   
   </main>
+       
             
            
             
@@ -163,15 +253,39 @@
             
 </template>
 <script>
-import MainMenu from './mainComponents/MainMenu.vue'
+import MainMenu from './mainComponents/MainMenu.vue';
+import Team from './mainComponents/Team.vue'
 export default {
   name:'Main',
   components:{
-    MainMenu
+    MainMenu,
+    Team
   },
   data(){
     return{
-      menu:['HOME','ABOUT','SERVICE','PROCESS','TEAM','BLOG']
+      menu:['HOME','ABOUT','SERVICE','PROCESS','TEAM','BLOG'],
+      team:[{
+        name:'David Cooper',
+        role:'CTO & CO-FOUNDER',
+        photo:require('../assets/img/team-1.jpg')
+      },
+      {
+        name:'Olivier Jones',
+        role:'CHIEF PROCUREMENT',
+        photo:require('../assets/img/team-3.jpg')
+      },
+      {
+        name:'Emma Lopez',
+        role:'CHIEF MARKETING',
+        photo:require('../assets/img/team-2.jpg')
+      },
+      {
+        name:'T.Johonson',
+        role:'CEO & PRESIDENT',
+        photo:require('../assets/img/team-4.jpg')
+      },
+      ],
+      
     }
   }
 }
@@ -238,33 +352,24 @@ export default {
   .dc-wrapper{
     .row{
       .col-6{
-        p:first-child{
-          color:$secondaryColor
-        }
-        div{
-          h2,h5{
-            color:white;
+       @include general();
+       h2{
+         color:white !important;
+       }
+        h5{
+          span{
+            color:$secondaryColor;
           }
-          h2{
-            padding: 5px 10px;
-          }
-          h2:first-child{
-            background-color: rgba($secondaryColor,  .2); 
-            border-radius: 5px;
-          }
-          h5{
-            span{
-              color:$secondaryColor;
-            }
-          }     
-        }
+        }     
+        
       }
     }
   }
 }
 
+
 .third-section{
-  background-color:lighten($secondaryColor, 70%);
+  background-color:lighten($primaryColor, 85%);
   padding:100px 0px;
   .dc-wrapper{
     .our-business{
@@ -317,4 +422,70 @@ export default {
   }
 }
 
+
+.fourth-section{
+  .top-fourth-section{
+    padding:100px 0 60px 0;
+    border-bottom:2px solid lighten($primaryColor, 80%);
+    @include general();
+    }
+  
+  .bottom-fourth-section{
+    margin-bottom:100px;
+    .container{
+      display:flex;
+      justify-content: space-evenly;
+      .item{
+        width:15%;
+        text-align: center;
+        position:relative;
+        div{
+          position:absolute;
+          top:-19px;
+          left:50%;
+          transform: translateX(-50%);
+          background-color: lighten($primaryColor, 80%);
+          color:$secondaryColor;
+          border-radius:50%;
+          width: 35px;
+          height:35px;
+        }
+        h6{
+          margin:30px 0px;
+        }
+        p{
+          font-size:12px;
+          color:lighten($primaryColor,50%)
+        }
+      }
+    }
+  }
+ 
+}
+
+.fifth-section{
+  padding:100px 0px;
+   background-color:lighten($primaryColor, 5%);
+  .fifth-section-left{
+    padding-right:50px;
+    @include general();
+    h2{
+        color:white !important;
+      }
+  }
+  .fifth-section-right{
+    margin-top:50px;
+    background-color:$secondaryColor;
+    p{
+      font-size: 12px;
+      margin:20px 0px;
+    }
+    p:last-child{
+      span{
+        color:darken($secondaryColor, 10%);
+        font-size:14px;
+      }
+    }
+  }
+}
 </style>
