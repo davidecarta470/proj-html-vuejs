@@ -242,7 +242,68 @@
         </div>
       </div>
     </section>
-    <section></section>
+
+
+    <section class="sixth-section">
+      <div class="dc-wrapper">
+        <p class="our-business"><strong>OUR EDITIORIAL CONTENT</strong> </p>
+        <div class="d-flex my-3">
+          <h2><strong>Latest</strong></h2>
+          <h2 class="px-3"><strong>News</strong></h2>
+        </div>
+        <div class="row">
+          <div class="col-8">
+           Every week we publish contet about what is best in the business world.
+          </div>
+          <div class="col-4 d-flex justify-content-end"> <button class="dc-button-fill">SEE ALL</button></div>
+        </div>
+        <div class="items d-flex">
+          
+            <div class=" item">
+              <img src="../assets/img/news-1.jpg" alt="">
+                <h6 class="my-3"><strong>Increasing creativity is possible for everyone</strong></h6>
+                
+            </div>
+            <div class=" item">
+              <img src="../assets/img/news-2.jpg" alt="">
+                <h6 class="my-3"><strong>Because market research is part of the business plan</strong></h6>
+                
+            </div>
+            <div class=" item">
+              <img src="../assets/img/news-3.jpg" alt="">
+                <h6 class="my-3"><strong>Working from home is now a trend</strong></h6>
+                
+            </div>
+
+         
+        </div>
+      </div>
+    </section>
+
+
+    <section class="seventh-section">
+      <div class="dc-wrapper">
+        <div class="row">
+
+          <div class="col-6">
+             <p><strong>NEWSLETTERS</strong></p>
+            <div class="d-flex my-3 ">
+              <h2><strong>Know</strong></h2>
+              <h2><strong>first</strong></h2>
+            </div>
+            <p class="my-3 text-white">
+              Follow closely and receive content about our company and the news of the current market
+            </p>
+          </div>
+
+          <div class="col-6">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Email">
+            <button class="dc-button-fill">SUBSCRIBE</button>
+          </div>
+        </div>
+      </div>
+    </section>
   
   </main>
        
@@ -285,7 +346,7 @@ export default {
         photo:require('../assets/img/team-4.jpg')
       },
       ],
-      
+
     }
   }
 }
@@ -463,6 +524,7 @@ export default {
  
 }
 
+
 .fifth-section{
   padding:100px 0px;
    background-color:lighten($primaryColor, 5%);
@@ -488,4 +550,88 @@ export default {
     }
   }
 }
+
+
+.sixth-section{
+  padding:100px 0px;
+  .dc-wrapper{
+    .our-business{
+     color:$secondaryColor;
+    }
+    div{
+      font-size:12px !important;
+      h2{
+        padding:5px 0px;
+
+      }
+      h2:last-child{
+        background-color: rgba($secondaryColor, .2);
+        color:$secondaryColor;
+        margin-left:10px;
+        border-radius:5px;
+      }
+    }
+    div{
+      .col-8{
+        color:lighten($primaryColor, 50%);
+      }
+    }
+    .items{
+      padding-top:21px;
+        .item:nth-child(2){
+          margin:0 21px;
+        }
+        .item{
+          width:calc(33.33333% - 14px);
+          position: relative;
+          color:white;
+          h6{
+            text-align: center;
+            width:80%;
+            position: absolute;
+            top:60%;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+          img{
+            width: 100%;
+            border-radius:10px;
+            filter: brightness(50%);
+          }
+        }
+    }
+  }
+}
+
+
+.seventh-section{
+  background-image:url('../assets/img/bg-1.jpg');
+  background-size:cover;
+  background-position:center;
+  padding:100px 0;
+  .dc-wrapper{
+    font-size: 18px;
+    padding:0 100px;
+    .col-6{
+      padding:40px;
+      @include general();
+      h2{
+          color:white !important;
+        }
+      input{
+        width: 100%;
+            margin-bottom:12px;
+            padding:10px;
+            background-color:rgba(WHITE, $alpha: 0.5);
+            border:none;
+            font-size:10px;
+            color: lighten($primaryColor,30%);
+          }
+    }
+  }
+}
 </style>
+         
+          
+      
+          
