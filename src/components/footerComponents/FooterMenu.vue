@@ -34,18 +34,20 @@ export default {
 @import '../../assets/style/mixin.scss';
 
 .dc-grid-item{
-  h5{
-    color:white;
-    margin-bottom:10px;
-  }
   color:lighten($primaryColor, 50%);
   margin-left:20px;
   background-color:lighten($primaryColor,10%);
   border-radius:10px;
-  padding:20px;
+  padding:30px;
   float: left;
   width:calc(25% - 20px);
-  
+
+  h5{
+    color:white;
+    margin-bottom:10px;
   }
+
+
+}
 
 </style>
