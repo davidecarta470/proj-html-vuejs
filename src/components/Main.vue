@@ -23,10 +23,10 @@
              <h1>Insurance Consulting</h1>
              <form>
                  <div class="row">
-                   <input type="text " class="col-5" placeholder="NAME">
-                   <input type="text " class="col-5" placeholder="EMAIL">
-                   <input type="text " class="col-5" placeholder="PHONE">
-                   <input type="text " class="col-5" placeholder="MORE INFO">
+                   <input type="text " class="col-5" placeholder="Name">
+                   <input type="text " class="col-5" placeholder="Email">
+                   <input type="text " class="col-5" placeholder="Phone">
+                   <input type="text " class="col-5" placeholder="More info">
                  </div>
              </form>
              <button class="dc-button-fill ">GET IN TOUCH</button>
@@ -389,12 +389,8 @@ export default {
         form{
           .row{
             input{
-              margin:12px;
-              padding:10px 10px;
               background-color:rgba($color: transparent, $alpha: 0.1);
-              border:none;
-              font-size:10px;
-              color: lighten($primaryColor,30%);
+              @include generalInput();
             }
           }
         }
@@ -413,7 +409,7 @@ export default {
   .dc-wrapper{
     .row{
       .col-6{
-       @include general();
+       @include standardLayout();
        h2{
          color:white !important;
        }
@@ -488,7 +484,7 @@ export default {
   .top-fourth-section{
     padding:100px 0 60px 0;
     border-bottom:2px solid lighten($primaryColor, 80%);
-    @include general();
+    @include standardLayout();
     }
   
   .bottom-fourth-section{
@@ -530,7 +526,7 @@ export default {
    background-color:lighten($primaryColor, 5%);
   .fifth-section-left{
     padding-right:50px;
-    @include general();
+    @include standardLayout();
     h2{
         color:white !important;
       }
@@ -614,19 +610,16 @@ export default {
     padding:0 100px;
     .col-6{
       padding:40px;
-      @include general();
+      @include standardLayout();
       h2{
           color:white !important;
         }
       input{
+        background-color:rgba(WHITE, $alpha: 0.5);
         width: 100%;
-            margin-bottom:12px;
-            padding:10px;
-            background-color:rgba(WHITE, $alpha: 0.5);
-            border:none;
-            font-size:10px;
-            color: lighten($primaryColor,30%);
-          }
+        @include generalInput();
+        margin: 0 0 12px 0;
+        }
     }
   }
 }

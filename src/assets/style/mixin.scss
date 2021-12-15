@@ -1,10 +1,13 @@
+
+// centratura testo con display flex
 @mixin center(){
   display:flex;
   justify-content: space-between;
   align-items: center;
 }
+// layout ripetuto uguale in piu parti
+@mixin standardLayout(){
 
-@mixin general(){
   p:first-child{
     color:$secondaryColor;
   }
@@ -26,4 +29,13 @@
       border-radius: 5px;
     } 
 }
+}
+// caratteristiche input
+@mixin generalInput(){
+  font-size: 14px;
+  margin:12px;
+  padding:10px;
+  border:none;
+  border-radius:4px;
+  color: lighten($primaryColor,30%);
 }
